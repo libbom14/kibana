@@ -83,9 +83,9 @@ export default function ({ getService, getPageObjects }) {
     describe('notifications:banner', () => {
       it('Should convert notification banner markdown into HTML', async function () {
         await PageObjects.settings.clickKibanaSettings();
-        await PageObjects.settings.setAdvancedSettingsInput('notifications:banner', '# Welcome to Kibana', 'unsavedValueMarkdownTextArea');
+        await PageObjects.settings.setAdvancedSettingsInput('notifications:banner', '# Welcome to CLOA', 'unsavedValueMarkdownTextArea');
         const bannerValue = await PageObjects.settings.getAdvancedSettings('notifications:banner');
-        expect(bannerValue).to.equal('Welcome to Kibana');
+        expect(bannerValue).to.equal('Welcome to CLOA');
       });
 
       after('navigate to settings page and clear notifications:banner', async () => {
